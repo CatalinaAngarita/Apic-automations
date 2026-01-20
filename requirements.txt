@@ -1,0 +1,35 @@
+# FastAPI y servidor
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Base de datos
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+alembic==1.12.1
+
+# Supabase
+supabase==2.0.3
+
+# Variables de entorno
+python-dotenv==1.0.0
+
+# Validación y serialización
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# HTTP client para n8n
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Seguridad
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Utilidades
+python-dateutil==2.8.2
