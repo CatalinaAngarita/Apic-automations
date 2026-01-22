@@ -1,20 +1,15 @@
-"""
-Punto de entrada de FastAPI
-"""
 from fastapi import FastAPI
+from app.core.config import settings
 
-app = FastAPI(
-    title="Repoc Automations API",
-    description="API para automatizaciones",
-    version="1.0.0"
-)
-
+app = FastAPI(title=settings.PROJECT_NAME)
 
 @app.get("/")
-async def root():
-    return {"message": "Repoc Automations API"}
-
+def read_root():
+    return {
+        "message": f"Bienvenido a {settings.PROJECT_NAME}",
+        "n8n_target": settings.N8N_WEBHOOK_URL
+    }
 
 @app.get("/health")
-async def health_check():
-    return {"status": "healthy"}
+def health_check():
+    return {"status": "ok"}
