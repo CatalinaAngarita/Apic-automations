@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: apic-backend:latest
+    image: apic-automations:latest
     container_name: apic_backend
     ports:
       - "8000:8000"
